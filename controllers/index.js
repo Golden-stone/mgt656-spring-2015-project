@@ -8,7 +8,7 @@ function index (request, response) {
   var now = new Date();
   
   var contextData = {
-    'title': 'MGT 656 Project',
+    'title': 'eventNinja',
     'tagline': 'A MGT 656 Class Project.',
     'events': []
   };
