@@ -65,7 +65,18 @@ function getMaxId(argument) {
   
 }
 
+function getEventsAfterDate(currentTime){
+  var eventsAfterCurrentDate = [];
+  for (var i = allEvents.length - 1; i >= 0; i--) {
+    if (allEvents[i].date > currentTime){
+      eventsAfterCurrentDate.push(allEvents[i]);
+    }
+  return eventsAfterCurrentDate;
+  }
+}
+
 module.exports = exports = {
+  getEventsAfterDate: getEventsAfterDate,
   all: allEvents,
   getById: getById,
   getMaxI: getMaxId
