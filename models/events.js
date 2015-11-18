@@ -53,6 +53,18 @@ function getById (id) {
   }
   return null;
 }
+
+function getMaxId(argument) {
+  var maxId = null;
+  for (var i = allEvents.length - 1; i >= 0; i--) {
+    if (maxId == null || maxId < allEvents[i].id){
+      maxId = allEvents[i];
+    }
+  }
+  return maxId;
+  
+}
+
 function getEventsAfterDate(currentTime){
   var eventsAfterCurrentDate = [];
   for (var i = allEvents.length - 1; i >= 0; i--) {
@@ -62,8 +74,10 @@ function getEventsAfterDate(currentTime){
   return eventsAfterCurrentDate;
   }
 }
+
 module.exports = exports = {
   getEventsAfterDate: getEventsAfterDate,
   all: allEvents,
-  getById: getById
+  getById: getById,
+  getMaxI: getMaxId
 };
