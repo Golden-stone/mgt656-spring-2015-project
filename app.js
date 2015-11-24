@@ -22,6 +22,10 @@ app.get('/about', aboutControllers.about);
 app.get('/events', eventControllers.listEvents);
 app.get('/events/new', eventControllers.newEvent);
 app.post('/events/new', eventControllers.saveEvent);
+// <<<<<<< HEAD
+// =======
+// app.get('/events/:id([0-9]+)', eventControllers.eventDetail);
+// >>>>>>> 061472a30b2c90b5e54a4484f4fd633c800efbb9
 app.get('/api/events', eventControllers.api);
 
 module.exports = app;
