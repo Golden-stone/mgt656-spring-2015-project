@@ -1,5 +1,4 @@
 {% extends "layout.html" %}
-
 {% block header %}
   <header>
     <h1>{{ title }} </h1>
@@ -7,6 +6,7 @@
 {% endblock %}
 
 {% block mainContent %}
+
   <p>
     Welcome to {{ title }}. {{tagline}}
   </p>
@@ -27,4 +27,32 @@
   <p>
     <a id="new" href="/events/new">Create a new event</a>
   </p>
+  <head>
+  <style>
+    h1 {
+      color: black;
+      font-size: 2.5em;
+      font-family: Helvetica;
+    }
+ body {
+      /*text-align: center;*/
+      background: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8VpceP1vAAoG1NAoLO3E-Wtdga1cba3yidk6i4KFq0O8sV6Qv8w");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      font-family: helvetica;
+    }    
+    /*body {*/
+    /*  background-color: #585858;*/
+    /*  color: #202020;*/
+    /*  font-size: 18px;*/
+    /*  font-family: Helvetica;*/
+    /*  } */
+     
+
+  </style>
+</head>
+
+
+
 {% endblock %}

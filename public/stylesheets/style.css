@@ -5,10 +5,16 @@ header{
   border: 1px solid #ddd;
   margin: 2em 0;
 }
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
+ body {
+      background-color: #767676;
+      color: black;
+      font-size: 18px;
+      font-family: Helvetica;
+      } 
+/*body {*/
+/*  padding: 50px;*/
+/*  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;*/
+/*}*/
 
 a {
   color: #00B7FF;
