@@ -17,7 +17,18 @@
         {% endfor %}
     </ul>
 
-<p> Come on out! </p>
+    <p> Come on out! </p>
+    <div>
+        <ul class="form-errors">
+            {% for error in errors %}
+                <li>{{error}}</li>
+            {% endfor %}
+        </ul>
+    </div>
+    <form method="POST">
+        <input type="text" name="email" ide="email" placeholder="Your email"/>
+        <input type="submit" value="Submit" color=black />
+    </form>
  <head>
   <style>
     h1 {
@@ -30,7 +41,7 @@
       background: url("https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQ8VpceP1vAAoG1NAoLO3E-Wtdga1cba3yidk6i4KFq0O8sV6Qv8w");
       background-size: cover;
       background-position: center;
-      color: white;
+      color: gray;
       font-family: helvetica;
     }    
     /*body {*/
