@@ -91,8 +91,8 @@ function saveEvent(request, response){
   var hour = checkIntRange(request, 'hour', 0, 23, contextData)
 
 
-  if(!validator.isURL(request.body.image) || (request.body.image.match(/\,(gif|png)$/i) == null)){
-    contextData.errors.push("Your image be a png or gif online");
+  if(!validator.isURL(request.body.image) || (request.body.image.match(/\.(gif|png)$/) == null)){
+    contextData.errors.push("Your image must be a png or gif online");
   }
   
   if (contextData.errors.length === 0) {
