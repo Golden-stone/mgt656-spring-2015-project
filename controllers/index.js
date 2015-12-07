@@ -18,6 +18,7 @@ function index (request, response) {
       contextData.events.push(event);
     }
   }
+  contextData.events.sort(event.date)
   response.render('index.html', contextData);
 }
 
