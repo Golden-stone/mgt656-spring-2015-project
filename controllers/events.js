@@ -139,13 +139,14 @@ function rsvp (request, response){
 function api(request, response){
   var output = {events: []};
   var search = request.query.search;
-  
+  // ?search=barbeque
   if (search) {
     for(var i = 0; i < events.all.length; i++){
       if(events.all[i].title.indexOf(search) !== -1){
         output.events.push(events.all[i]);
       }
     }
+    
   }else{
       output.events = events.all; 
   }
@@ -161,9 +162,13 @@ function api(request, response){
       if (events.all[i].title.indexOf(search) !== -1){
         output.events.push(events.all[i]);
       }
+      //nested for loop
+      for(var j=0; j<events.all[i].attending.length; j++) {
+        if (events.all[i].attending[j].indexOf(search) !== -1)
+          output.events.push(events.all[j]);
+      }
     }
   }
-  
   else{
     output.events = events.all;
   }
